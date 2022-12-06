@@ -2,11 +2,17 @@
     --color-primary: #0075FF;
     /*--color-primary: #e511f8;*/
     --color-footer: #888;
+    --transitionhover: 0.3s;
 }
 
 body{
     padding: 0;
     margin: 0;
+}
+
+.nav, .sec-home, .sec-skills {
+    border-bottom: solid 1px var(--color-footer);
+
 }
 
 .nav {
@@ -15,15 +21,29 @@ body{
     align-items: center;
     width: 100%;
     height: 4rem;
-    border-bottom: solid 1px #ddd;
 }
 
-.logo img{
+/* .logo img{
     max-width: 3rem;
 }
 
 .logo img:hover{
     cursor: pointer;
+} */
+
+/* .logo {
+    max-width: 3rem;
+    fill: var(--color-primary);
+} */
+
+svg g {
+    fill: var(--color-primary);
+}
+
+.logo:hover {
+    filter: invert(100%);
+    cursor: pointer;
+    transition-duration: var(--transitionhover);
 }
 
 .main-menu {
@@ -46,6 +66,7 @@ body{
     text-decoration: underline;
     filter: invert(100%);
     cursor: pointer;
+    transition-duration: var(--transitionhover);
 }
 
 .nav-icons{
@@ -61,15 +82,7 @@ body{
 .nav-icons .icons:hover{
     filter: invert(100%);
     cursor: pointer;
-}
-
-.footer{
-    background-color: var(--color-footer);
-    padding: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
+    transition-duration: var(--transitionhover);
 }
 
 .sec-home, .sec-skills, .sec-contactme{
@@ -83,7 +96,6 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid #ddd;
 }
 
 .home-cta{
@@ -92,25 +104,70 @@ body{
     justify-content: center;
 }
 
-.home-cta a{
-    padding: 30px;
+.content-animation{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.word-change{ 
+    background-color: var(--color-primary);
+    font-size: 2rem;
+    color: white;
+    line-height: 3rem;
+    height: 3rem;
+    padding: 0 14px 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.word-change:before{
+    content: '';
+    background-color: black;
+    width: 1px;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 7px;
 }
 
 .home-img img{
     width: 200px;
 }
 
-.btn-main{
+.content-boton-home{
+    padding: 0;
+}
+
+.boton-home{
     padding: 0.25rem 1.5rem;
+    margin: 10px 0px;
     border-radius: 0.25rem;
     background-color: var(--color-primary);
     color: white;
     border: solid 1px var(--color-primary);
 }
 
-.btn-main:hover{
+.boton-home:hover{
+    text-decoration: none;
     color: var(--color-primary);
     background-color: white;
+    transition-duration: var(--transitionhover);
+}
+
+.footer{
+    background-color: var(--color-footer);
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.footer .credits{
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
