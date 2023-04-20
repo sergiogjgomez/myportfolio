@@ -10,17 +10,13 @@ body{
     margin: 0;
 }
 
-.nav, .sec-home, .sec-skills {
-    border-bottom: solid 1px var(--color-footer);
-
-}
-
 .nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 4rem;
+    border-bottom: solid 1px var(--color-footer);
 }
 
 /* .logo img{
@@ -63,7 +59,7 @@ svg g {
 }
 
 .main-menu li a:hover{
-    text-decoration: underline;
+    text-decoration: none;
     filter: invert(100%);
     cursor: pointer;
     transition-duration: var(--transitionhover);
